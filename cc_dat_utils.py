@@ -183,6 +183,7 @@ def make_cc_data_from_dat(dat_file):
         for i in range(num_levels):
             level = make_level_from_dat(reader)
             data.levels.append(level)
+    print(data)
     return data
 
 
@@ -284,3 +285,7 @@ def write_cc_data_to_dat(cc_dat, dat_file):
         writer.write(cc_dat.level_count.to_bytes(2, cc_data.BYTE_ORDER))
         for level in cc_dat.levels:
             write_level_to_dat(level, writer)
+
+
+
+make_cc_data_from_dat("data/pfgd_test.dat")
