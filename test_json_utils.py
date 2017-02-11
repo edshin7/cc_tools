@@ -15,6 +15,15 @@ def make_game_library_from_json(json_data):
         #Add that Game object to the game_library
     #Return the completed game_library
 
+    # print (json_data)
+
+    # loops through json data list under the key games 
+    for data in json_data["games"]:
+        # print(data)
+        platform = test_data.Platform(data["platform"]["name"], data["platform"]["launch year"])
+        game = test_data.Game(data["title"], platform, data["year"])
+        game_library.add_game(game)
+
     return game_library
 
 # Handling command line arguments
@@ -34,3 +43,18 @@ else:
 #Load the json data from the input file
 #Use make_game_library_from_json(json_data) to convert the data to GameLibrary data
 #Print out the resulting GameLibrary data using print_game_library(game_library_data) in test_data.py
+
+# opens input_json_file to read out data
+json_data = open(input_json_file).read()
+
+# loads json file to decode
+file = json.loads(json_data)
+
+# makes game Library with decoded json file
+gameLibrary = make_game_library_from_json(file)
+
+# prints out data from gameLibrary
+test_data.print_game_library(gameLibrary)
+
+
+

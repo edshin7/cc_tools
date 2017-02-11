@@ -1,0 +1,32 @@
+{
+    "games": 
+    [
+        {
+            "title": "Chip's Challenge",
+            "platform": 
+            {
+                "name": "Atari Lynx",
+                "launch year": 1989
+            },
+            "year": 1989
+        },
+        {
+            "title": "Chip's Challenge 2",
+            "platform": 
+            {
+                "name": "Steam",
+                "launch year": 2003
+            },
+            "year": 2015
+        },
+        {
+            "title": "Undertale",
+            "platform": 
+            {
+                "name": "Game Maker",
+                "launch year": 1999
+            },
+            "year": 2015
+        }
+    ]
+}
